@@ -86,7 +86,7 @@ async def skip_track(_, m: Message):
     if len(m.command) == 1:
         await skip()
     else:
-        #https://github.com/callsmusic/tgvc-userbot/blob/dev/plugins/vc/player.py#L268-L288
+        #https://github.com/opbrutal/amanxd/blob/dev/plugins/vc/player.py#L268-L288
         try:
             items = list(dict.fromkeys(m.command[1:]))
             items = [int(x) for x in items if x.isdigit()]
@@ -191,7 +191,7 @@ async def set_mute(_, m: Message):
         return
     k=await mute()
     if k:
-        k = await m.reply_text(f" 🔇 Succesfully Muted ")
+        k = await m.reply_text(f" 🔇 Succesfully Muted by @A_4_AMAN_Officcial")
         await delete_messages([m, k])
     else:
         k = await m.reply_text("Already muted.")
